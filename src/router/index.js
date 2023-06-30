@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory,RouterView } from 'vue-router'
+import { createRouter, createWebHistory, RouterView } from 'vue-router'
 import Tr from "@/i18n/translation"
 
 const router = createRouter({
@@ -15,9 +15,14 @@ const router = createRouter({
           component: () => import('../views/HomeView.vue')
         },
         
-      ]
-    }
-    
+      ],
+      
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/'
+    },
+
   ]
 })
 
