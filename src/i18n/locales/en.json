@@ -1,0 +1,17 @@
+{
+    "locale": {
+        "sr": "Serbian 🇷🇸",
+        "en": "English 🇬🇧"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About"
+    },
+    "home": {
+        "header": "Header Home",
+        "created_by": "Who created"
+    },
+    "about": {
+        "header": "Header about"
+    }
+}
