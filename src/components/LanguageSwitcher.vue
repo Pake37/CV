@@ -81,18 +81,18 @@ select {
     /* Personalize */
     flex: 1;
     padding: 0 1em;
-    color: #c2c5c8;
-    background-color: #424954;
+    color: var(--arrow-color-hover);
+    background-color: var(--primary-color);
     background-image: none;
     cursor: pointer;
-    color: white;
+    color: var(--white-primary);
     transition: .25s all ease;
 
 
 }
 
 select:hover {
-    color: #c2c5c8;
+    color: var(--arrow-color-hover);
 }
 
 /* Remove IE arrow */
@@ -123,8 +123,8 @@ select::-ms-expand {
     top: -1px;
     right: 0;
     padding: .5em;
-    background-color: #424954;
-    color: white;
+    background-color: var(primary-color);
+    color: var(--white-primary);
     transition: .25s all ease;
     pointer-events: none;
     font-size: .8rem;
@@ -136,6 +136,6 @@ select::-ms-expand {
 
 /* Transition */
 .selectWrapper:hover::after {
-    color: #c2c5c8;
+    color:var(--arrow-color-hover);
 }
 </style>

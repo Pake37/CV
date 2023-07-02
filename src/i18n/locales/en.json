@@ -3,15 +3,109 @@
         "sr": "Serbian 🇷🇸",
         "en": "English 🇬🇧"
     },
-    "nav": {
-        "home": "Home",
-        "about": "About"
-    },
-    "home": {
-        "header": "Header Home",
-        "created_by": "Who created"
-    },
     "about": {
-        "header": "Header about"
+        "name": "Stefan Pavlović",
+        "text": "I am from Belgrade and living in the blocks of New Belgrade.I have a diverse range of interests and activities that keep me engaged and fulfilled. Basketball has always been a passion of mine, and I enjoy playing it whenever I get the chance. Similarly, swimming is another activity I enjoy in from time to time, as it provides a refreshing and invigorating experience. I also enjoy swimming and relaxation in sea and lakes. Being near the water brings me a sense of tranquility and relaxation.In my free time, I often find myself drawn to the countryside, where I enjoy working on a village and reconnecting with nature.Apart from my physical pursuits, I have developed a keen interest in computer hardware and software. I find satisfaction in repairing and troubleshooting computer systems, always seeking to enhance my knowledge in this field. Moreover, I have a curious mind and enjoy exploring various domains of life, as I believe that knowledge from different areas enriches our understanding and broadens our horizons.Overall, I am an individual who embraces a diverse range of interests and is driven by the pursuit of knowledge and personal growth."
+    },
+    "education": {
+        "title": "Education and Qualifications",
+        "course_name": "Course in Java Development",
+        "course_level": "(Basic knowledge of Java)",
+        "my_project": {
+            "api_name": "API for NBS(Nacional Bank of Serbia)",
+            "api_text": "When I finished learning Java, I made this API for exchange rate from 'EUR' to 'RSD' and viewing that in Google tables,and that was my first project in programming, after that I started learning Web Development.",
+            "api_project_1": "First part of API Exchange rate middle rate by dates",
+            "api_project_2": "Second part of API Exchange rate on current day"
+        },
+        "internship":{
+            "title":"Web Development",
+            "about":"Internship at the 'Enon Solutions' for 4 months",
+            "text":"I am learning Web Development predominatly on my own. This internship is where I learned a lot about Web Development we worked with VUE framework learnig from mentors and from my colleague. We used Javascript, HTML5, CSS3,SASS, VUE 3, MySQL, Mars Engine. We also used Git,GitLab and Discord. Also it was a great teamwork experience.",
+            "project_1":"First project at internship called Taskify - it is an app for organization of team ",
+            "project_2":"Second project at internship called Schedulize - it is an app for scheduling services",
+            "certificate":"Certificate for internship"
+        },
+        "economy":{
+            "faculty_name":"University of Belgrade - B.Sc. of Economic Science",
+            "major":"major: Marketing",
+            "diploma":"Economy diploma"
+
+        }
+    },
+    "references":{
+        "title":"References",
+        "name":{
+            "ablux":"Marko Purić",
+            "probit":"Risto Ćuk",
+            "galenika":"Sanja Đerić"
+
+        },
+        "company":{
+            "ablux":"AB LUX D.O.O.",
+            "probit":"PRO-BIT D.O.O.",
+            "galenika":"Galenika A.D."
+        },
+        "recommendation":{
+            "galenika":"Recommendation - Sanja Đerić"
+        }
+    },
+    "skills":{
+        "title":"Skills",
+        "ordered":{
+            "sap":"SAP S4HANA - procurement",
+            "word":"Microsoft Word",
+            "excel":"Microsoft Excel",
+            "power_point":"Microsoft Power Point",
+            "figma":"Figma",
+            "vsc":"Visual Studio Code",
+            "license":"Driver license - B,B1,M"
+        }
+    },
+    "work-experience": {
+        "title":"Work Experience",
+        "ablux":{
+        "company":"AB LUX D.O.O.",
+        "text":"I worked as an administrative worker and computer maintenance personnel at an accounting agency during that period."
+        },
+        "probit":{
+        "company":"PRO-BIT D.O.O.",
+        "text":"I primarily worked in customer support, but I also worked on modifying their document displays in software and improving the functionality of their software. I had intense communication with their programmers regarding software functionality."
+        },
+        "galenika":{
+        "company":"Galenika A.D.",
+        "text":"I worked as an intern in procurement (procurement officer). I was part of a lot of negotiations and deals of big value, there was also and transition to SAP HANA when I was there so I also was introduced to working of that software in procurment"
+        },
+        "kleffman":{
+        "company":"Kleffmann D.O.O.",
+        "text":"I worked as administrative worker, and also I organized interviewers in the field because Kleffman D.O.O. is firm for market research in agriculture, the firm research which products are used in agriculture in Serbia"
+        }
+    },
+    "left":{
+        "personal-details":{
+            "pers_details_title":"Personal details",
+            "name_title":"Name",
+            "name":"Stefan Pavlović",
+            "address_title":"Address",
+            "address":"Narodnih heroja 58/2, 11070 New Belgrade",
+            "phone_title":"Phone number",
+            "email_title":"Email address"
+        },
+        "interests":{
+            "interests_title":"Interests",
+            "history":"History",
+            "sport":"Sport",
+            "technology":"Technology",
+            "film":"Film",
+            "philosophy":"Philosophy"
+        },
+        "languages":{
+            "languages_title":"Languages",
+            "language_sr":"Serbian",
+            "language_lvl":"Native",
+            "language_en":"English",
+            "language_sp_lvl":"Speaking - intermediate",
+            "language_wr_lvl":"Writting - intermediate"
+        }
+
     }
 }

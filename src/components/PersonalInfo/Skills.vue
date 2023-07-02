@@ -9,7 +9,7 @@ const { isDropDownSkills } = store;
 <template>
     <section class="skills">
         <div class="section-name" style="position: relative;">
-            <h2 class="text-dark" @click="isDropDownSkills">Skills</h2>
+            <h2 class="text-dark" @click="isDropDownSkills">{{$t("skills.title")}}</h2>
             <div class="arrow" @click="isDropDownSkills">
                 <div class="arrow-top" :class="{ arrowActiveTop: dropDownSkills }"></div>
                 <div class="arrow-bottom" :class="{ arrowActiveBottom: dropDownSkills }"></div>
@@ -19,10 +19,13 @@ const { isDropDownSkills } = store;
         <main class="education-parts" v-if="dropDownSkills" :class="{ backgroundImg: dropDownSkills }">
             <div class="main-section">
                 <ul class="body-text text-semi-dark">
-                    <li>Microsoft Office</li>
-                    <li>Google Analytics</li>
-                    <li>Google Adwords</li>
-                    <li>Google Optimise</li>
+                    <li>{{$t("skills.ordered.sap")}}</li>
+                    <li>{{$t("skills.ordered.word")}}</li>
+                    <li>{{$t("skills.ordered.excel")}}</li>
+                    <li>{{$t("skills.ordered.power_point")}}</li>
+                    <li>{{$t("skills.ordered.figma")}}</li>
+                    <li>{{$t("skills.ordered.vsc")}}</li>
+                    <li>{{$t("skills.ordered.license")}}</li>
                 </ul>
             </div>
         </main>
@@ -62,12 +65,12 @@ section {
 
 
 .text-dark {
-    color: rgb(81, 88, 94);
+    color: var(--text-color-dark);
     font-weight: bold;
 }
 
 .text-semi-dark {
-    color: #2c3e50;
+    color: var(--text-color-semi-dark);
     line-height: 1.5rem;
 }
 
@@ -75,7 +78,7 @@ section {
     width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #cfcfcf;
+    border-bottom: 1px solid var(--bottom-border);
 }
 
 .backgroundImg {
@@ -86,11 +89,13 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgb(192, 243, 255);
-    opacity: 0.07;
-    background-image: url(./../../assets/image/education.webp);
-    background-size: cover;
+    background: var(background-skills);
+    opacity: 0.05;
+    background-image: url(./../../assets/image/skills.svg);
+    background-size: contain;
     background-position: center;
+    
+    
 }
 
 .arrow {
@@ -107,7 +112,7 @@ section {
 
 .arrow-top,
 .arrow-bottom {
-    background-color: #51585e;
+    background-color: var(--arrow-color);
     height: 4px;
     left: -5px;
     position: absolute;
@@ -118,7 +123,7 @@ section {
 .arrow-top::after,
 .arrow-bottom::after {
     content: "";
-    background: #c2c5c8;
+    
     inset: 0;
     height: 100%;
     position: absolute;
@@ -183,7 +188,7 @@ section {
 
 .section-name:hover .arrow-top::after {
     content: "";
-    background: #c2c5c8;
+    background: var(--arrow-color-hover);
     inset: 0;
     height: 100%;
     position: absolute;
@@ -193,7 +198,7 @@ section {
 
 .section-name:hover .arrow-bottom::after {
     content: "";
-    background: #c2c5c8;
+    background: var(--arrow-color-hover);
     inset: 0;
     height: 100%;
     position: absolute;

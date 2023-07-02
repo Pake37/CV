@@ -9,7 +9,7 @@ const { isDropDownWorkExperience } = store;
 <template>
     <section class="work-experience">
         <div class="section-name" style="position: relative;">
-            <h2 class="text-dark" @click="isDropDownWorkExperience">Work Experience</h2>
+            <h2 class="text-dark" @click="isDropDownWorkExperience">{{$t("work-experience.title")}}</h2>
             <div class="arrow" @click="isDropDownWorkExperience">
                 <div class="arrow-top" :class="{arrowActiveTop:dropDownWorkExperience}"></div>
                 <div class="arrow-bottom" :class="{arrowActiveBottom:dropDownWorkExperience}"></div>
@@ -21,61 +21,49 @@ const { isDropDownWorkExperience } = store;
 
 
                 <div class="active-period">
-                    <h3 class="active-period title text-dark">Course in Java Development <span class="level-course">(Basic
-                            knowledge of Java)</span></h3>
-                    <div class="active-period period text-semi-dark">
-                        <span>01.11.2021.</span>
+                    <h3 class="active-period title text-dark">{{$t("work-experience.ablux.company")}}</h3>
+                    <div class="active-period period text-semi-dark"> 
+                        <span>12.2021</span>
                         <span>-</span>
-                        <span>11.07.2022</span>
+                        <span>07.2022</span>
                     </div>
 
                 </div>
-                <div class="body-text text-semi-dark">API for NBS(Nacional Bank of Serbia)</div>
-                <p class="body-text text-semi-dark">When I finished learning Java, I made this API for exchange rate for
-                    NBS,
-                    and that was my first project in programming, after that I started learning Web Development.
+                <p class="body-text text-semi-dark">  {{$t("work-experience.ablux.text")}}
                 </p>
-                <a href="https://github.com/Pake37/Kursna-lista-srednji-kurs-NBS-po-datumima.git">First part of API
-                    Exchange
-                    rate middle rate by dates</a>
-                <a href="https://github.com/Pake37/Kursna-lista-NBS-na-teku-i-dan.git">Second part of API Exchange rate
-                    on
-                    current day</a>
             </div>
             <div class="main-section">
                 <div class="active-period">
-                    <h3 class="active-period title text-dark">Web Development</h3>
+                    <h3 class="active-period title text-dark">{{$t("work-experience.probit.company")}}</h3>
                     <div class="active-period period text-semi-dark">
-                        <span>09.2022</span>
+                        <span>03.08.2020</span>
                         <span>-</span>
-                        <span>Present</span>
+                        <span>09.07.2021</span>
                     </div>
                 </div>
-                <div class="body-text text-semi-dark">Internship at the "Enon Solutions" for 4 months</div>
-                <p class="body-text text-semi-dark">I am learning Web Development predominatly on my own. This
-                    internship is
-                    where I learned a lot about Web Development with VUE framework
-                    from mentors and from my colleague. We used Javascript, HTML5, CSS3, VUE 3, MySQL, Mars Engine. We
-                    also
-                    used
-                    Git,GitLab and Discord. Also it was a great teamwork experience.</p>
-                <a href="http://074w123.e2.mars-hosting.com/auth">First project at internship called Taskify - it is an
-                    app
-                    for
-                    organization of team </a>
-                <a href="https://110w123.mars2.mars-hosting.com/" style="display: block;">Second project at internship
-                    called
-                    Schedulize - it is an app for scheduling services</a>
-
+                <p class="body-text text-semi-dark"> {{$t("work-experience.probit.text")}}</p>
             </div>
-
             <div class="main-section">
                 <div class="active-period">
-                    <h3 class="active-period title text-dark">University of Belgrade - B.Sc. of Economic Science</h3>
+                    <h3 class="active-period title text-dark">{{$t("work-experience.galenika.company")}}</h3>
                     <div class="active-period period text-semi-dark">
-                        <span>major: Marketing</span>
+                        <span>01.11.2018</span>
+                        <span>-</span>
+                        <span>01.11.2019</span>
                     </div>
                 </div>
+                <p class="body-text text-semi-dark">  {{$t("work-experience.galenika.text")}}</p>
+            </div>
+            <div class="main-section">
+                <div class="active-period">
+                    <h3 class="active-period title text-dark">{{$t("work-experience.kleffman.company")}}</h3>
+                    <div class="active-period period text-semi-dark">
+                        <span>17.05.2018</span>
+                        <span>-</span>
+                        <span>15.08.2018</span>
+                    </div>
+                </div>
+                <p class="body-text text-semi-dark"> {{$t("work-experience.kleffman.text")}} </p>
             </div>
         </main>
     </section>
@@ -134,12 +122,12 @@ section {
 
 
 .text-dark {
-    color: rgb(81, 88, 94);
+    color: var(--text-color-dark);
     font-weight: bold;
 }
 
 .text-semi-dark {
-    color: #2c3e50;
+    color: var(--text-color-semi-dark);
     line-height: 1.5rem;
 }
 
@@ -147,7 +135,7 @@ section {
     width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #cfcfcf;
+    border-bottom: 1px solid var(--bottom-border);
 }
 
 .backgroundImg {
@@ -158,9 +146,9 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgb(192, 243, 255);
-    opacity: 0.07;
-    background-image: url(./../../assets/image/education.webp);
+    background: var(--background-work-experience);
+    opacity: 0.05;
+    background-image: url(./../../assets/image/work.svg);
     background-size: cover;
     background-position: center;
 }
@@ -179,7 +167,7 @@ section {
 
 .arrow-top,
 .arrow-bottom {
-    background-color: #51585e;
+    background-color: var(--arrow-color);
     height: 4px;
     left: -5px;
     position: absolute;
@@ -190,7 +178,7 @@ section {
 .arrow-top::after,
 .arrow-bottom::after {
     content: "";
-    background: #c2c5c8;
+
     inset: 0;
     height: 100%;
     position: absolute;
@@ -254,7 +242,7 @@ section {
 
 .section-name:hover .arrow-top::after {
     content: "";
-    background: #c2c5c8;
+    background: var(--arrow-color-hover);
     inset: 0;
     height: 100%;
     position: absolute;
@@ -264,7 +252,7 @@ section {
 
 .section-name:hover .arrow-bottom::after {
     content: "";
-    background: #c2c5c8;
+    background: var(--arrow-color-hover);
     inset: 0;
     height: 100%;
     position: absolute;

@@ -4,14 +4,9 @@
 
 <template>
     <section class="about">
-        <h1 class="text-dark">Stefan Pavlović</h1>
+        <h1 class="text-dark">{{$t("about.name")}}</h1>
         <div class="horizontal-divider"></div>
-        <button @click="isDropDown">sdalfsačlfs</button>
-        <p class="body-text text-semi-dark">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
-            also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+        <p class="body-text text-semi-dark">{{$t("about.text")}}</p>
     </section>
 </template>
 <style scoped>
@@ -20,7 +15,7 @@ section {
 }
 
 .text-dark {
-    color: rgb(81, 88, 94);
+    color: var(--text-color-dark);
     font-weight: bold;
 }
 
@@ -28,7 +23,7 @@ section {
     width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #cfcfcf;
+    border-bottom: 1px solid var(--bottom-border);
 }
 
 .body-text {
@@ -36,6 +31,7 @@ section {
 }
 
 .text-semi-dark {
-    color: #2c3e50;
+    color: var(--text-color-semi-dark);
     line-height: 1.5rem;
-}</style>
+}
+</style>

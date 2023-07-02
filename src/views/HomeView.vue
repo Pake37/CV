@@ -25,7 +25,7 @@ import PersonalInfo from './../components/PersonalInfo.vue'
 
 body {
   margin: 0;
-  background-color: rgb(64, 84, 113);
+  background-color: var(--bacground-color-body);
   display: flex;
   justify-content: center;
   font-family: 'Roboto', sans-serif;
@@ -53,7 +53,7 @@ h3 {
   min-height: 100vh;
   width: 950px;
   max-width: 100%;
-  background-color: white;
+  background-color: var(--white-primary);
   display: flex;
   flex-wrap: wrap;
 }

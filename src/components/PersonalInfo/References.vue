@@ -1,5 +1,5 @@
 <script setup>
-import {useCommonFieldsStore} from './../../stores/commonFields'
+import { useCommonFieldsStore } from './../../stores/commonFields'
 import { storeToRefs } from "pinia";
 const store = useCommonFieldsStore();
 const { dropDownReferences } = storeToRefs(store);
@@ -9,7 +9,7 @@ const { isDropDownReferences } = store;
 <template>
     <section class="references">
         <div class="section-name" style="position: relative;">
-            <h2 class="text-dark" @click="isDropDownReferences">References</h2>
+            <h2 class="text-dark" @click="isDropDownReferences">{{$t("references.title")}}</h2>
             <div class="arrow" @click="isDropDownReferences">
                 <div class="arrow-top" :class="{ arrowActiveTop: dropDownReferences }"></div>
                 <div class="arrow-bottom" :class="{ arrowActiveBottom: dropDownReferences }"></div>
@@ -17,24 +17,32 @@ const { isDropDownReferences } = store;
         </div>
         <div class="horizontal-divider"></div>
         <main class="education-parts" v-if="dropDownReferences" :class="{ backgroundImg: dropDownReferences }">
+            <div class="active-period">
+                <h3 class="active-period title text-dark">{{$t("references.name.ablux")}}</h3>
+                <div class="active-period period text-semi-dark">
+                    <span class="period">{{$t("references.company.ablux")}}</span>
+                </div>
+            </div>
+            <a href="tel:+381642366102" class="body-text text-semi-dark phone">064/23-66-102</a>
+            <a href="mailto:jovan.jovic@gmail.com" class="body-text text-semi-dark "
+                style="display: block;">marko@ablux.rs</a>
             <div class="main-section">
                 <div class="active-period">
-                    <h3 class="active-period title text-dark">Pera Peric</h3>
+                    <h3 class="active-period title text-dark">{{$t("references.name.probit")}}</h3>
                     <div class="active-period period text-semi-dark">
-                        <span>CPE Group</span>
+                        <span class="period">{{$t("references.company.probit")}}</span>
                     </div>
                 </div>
-                <div class="body-text text-semi-dark">063/47-26-658</div>
-                <div class="body-text text-semi-dark">pera.peric@gmail.com</div>
-
+                <a href="tel:+381638805890" class="body-text text-semi-dark phone">063/88-05-890</a>
                 <div class="active-period">
-                    <h3 class="active-period title text-dark">Jovan Jović</h3>
+                    <h3 class="active-period title text-dark">{{$t("references.name.galenika")}}</h3>
                     <div class="active-period period text-semi-dark">
-                        <span>Ludilo</span>
+                        <span class="period">{{$t("references.company.galenika")}}</span>
                     </div>
                 </div>
-                <div class="body-text text-semi-dark">065/48-96-965</div>
-                <div class="body-text text-semi-dark">jovan.jovic@gmail.com</div>
+                <a href="tel:+381642216179" class="body-text text-semi-dark phone">064/22-16-179</a>
+                <a href="./../../../public/Preporuka.pdf" target="_blank" class="body-text text-semi-dark "
+                    style="display: block;">{{$t("references.recommendation.galenika")}}</a>
             </div>
         </main>
     </section>
@@ -66,10 +74,24 @@ section {
     align-items: center;
 }
 
+a {
+    z-index: 1;
+}
+
 .active-period .period {
     display: flex;
     column-gap: .3rem;
     font-size: 0.85rem;
+}
+
+div .period {
+    font-weight: bold;
+    padding-right: .3rem;
+}
+
+div .phone {
+    font-weight: bold;
+
 }
 
 .main-section {
@@ -81,17 +103,18 @@ section {
 
 .body-text {
     font-size: 0.95rem;
+
 }
 
 
 
 .text-dark {
-    color: rgb(81, 88, 94);
+    color: var(--text-color-dark);
     font-weight: bold;
 }
 
 .text-semi-dark {
-    color: #2c3e50;
+    color:var(--text-color-semi-dark);
     line-height: 1.5rem;
 }
 
@@ -99,7 +122,7 @@ section {
     width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #cfcfcf;
+    border-bottom: 1px solid var(--bottom-border);
 }
 
 .backgroundImg {
@@ -110,10 +133,10 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgb(192, 243, 255);
-    opacity: 0.07;
-    background-image: url(./../../assets/image/education.webp);
-    background-size: cover;
+    background: var(--background-references);
+    opacity: 0.04;
+    background-image: url(./../../assets/image/preporuke.svg);
+    background-size: contain;
     background-position: center;
 }
 
@@ -131,7 +154,7 @@ section {
 
 .arrow-top,
 .arrow-bottom {
-    background-color: #51585e;
+    background-color:var(--arrow-color);
     height: 4px;
     left: -5px;
     position: absolute;
@@ -142,7 +165,7 @@ section {
 .arrow-top::after,
 .arrow-bottom::after {
     content: "";
-    background: #c2c5c8;
+    
     inset: 0;
     height: 100%;
     position: absolute;
@@ -180,16 +203,17 @@ section {
     transition-delay: 0.15s;
 }
 
-.arrowActiveTop{
+.arrowActiveTop {
     transform: rotate(-135deg);
     top: -11%;
     left: 4px;
 }
-.arrowActiveBottom{
+
+.arrowActiveBottom {
     transform: rotate(-45deg);
     top: 12%;
     left: 3.5px;
-    
+
 }
 
 .arrow:hover .arrow-bottom::after {
@@ -207,7 +231,7 @@ section {
 
 .section-name:hover .arrow-top::after {
     content: "";
-    background: #c2c5c8;
+    background: var(--arrow-color-hover);
     inset: 0;
     height: 100%;
     position: absolute;
@@ -217,7 +241,7 @@ section {
 
 .section-name:hover .arrow-bottom::after {
     content: "";
-    background: #c2c5c8;
+    background: var(--arrow-color-hover);
     inset: 0;
     height: 100%;
     position: absolute;
