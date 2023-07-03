@@ -59,7 +59,9 @@
             "power_point":"Microsoft Power Point",
             "figma":"Figma",
             "vsc":"Visual Studio Code",
-            "license":"Возачка дозвола - B,B1,M"
+            "license":"Возачка дозвола - B,B1,M",
+            "workbench":"MySQL Workbench"
+
         }
     },
     "work-experience": {

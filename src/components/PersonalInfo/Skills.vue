@@ -26,6 +26,7 @@ const { isDropDownSkills } = store;
                     <li>{{$t("skills.ordered.figma")}}</li>
                     <li>{{$t("skills.ordered.vsc")}}</li>
                     <li>{{$t("skills.ordered.license")}}</li>
+                    <li>{{$t("skills.ordered.workbench")}}</li>
                 </ul>
             </div>
         </main>

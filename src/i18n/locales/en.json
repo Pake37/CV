@@ -59,7 +59,8 @@
             "power_point":"Microsoft Power Point",
             "figma":"Figma",
             "vsc":"Visual Studio Code",
-            "license":"Driver license - B,B1,M"
+            "license":"Driver license - B,B1,M",
+            "workbench":"MySQL Workbench"
         }
     },
     "work-experience": {
