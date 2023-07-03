@@ -50,7 +50,7 @@ h3 {
 }
 
 .left .personal-details .info-list {
-    row-gap: 2rem;
+    row-gap: 0.5rem;
 }
 
 .left .info-list .info-item {
@@ -61,5 +61,8 @@ h3 {
 .left .info-title {
     font-weight: bold;
     font-size: 0.9rem;
+}
+.personal-details{
+    margin-bottom: 1rem;
 }
 </style>

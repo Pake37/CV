@@ -8,15 +8,15 @@
             <li class="info-item">
                 <div class="row full-width">
                     <div class="col-full info-title">{{ $t("left.languages.language_sr") }}</div>
-                    <div class="col-full">{{ $t("left.languages.language_lvl") }}</div>
+                    <div class="col-full lang-type-move-nat" >{{ $t("left.languages.language_lvl") }}</div>
                 </div>
             </li>
             <li class="info-item">
                 <div class="row full-width">
                     <div class="col-full info-title">{{ $t("left.languages.language_en") }}</div>
                     <div class="col-full text text-light"><span
-                            class="col-full text text-light">{{ $t("left.languages.language_sp_lvl") }}</span>
-                        <span class="col-full text text-light"
+                            class="col-full text text-light lang-type-move" >{{ $t("left.languages.language_sp_lvl") }}</span>
+                        <span class="col-full text text-light lang-type-move"
                             style="display: block;">{{ $t("left.languages.language_wr_lvl") }}</span>
                     </div>
                 </div>
@@ -79,5 +79,11 @@ h3 {
 .left .intrests .info-list,
 .left .languages .info-list {
     row-gap: .5rem;
+}
+.lang-type-move{
+    margin-left: -1rem;
+}
+.lang-type-move-nat{
+    margin-left: -2rem;
 }
 </style>

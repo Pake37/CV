@@ -6,7 +6,8 @@
     <section class="about">
         <h1 class="text-dark">{{$t("about.name")}}</h1>
         <div class="horizontal-divider"></div>
-        <p class="body-text text-semi-dark">{{$t("about.text")}}</p>
+        <p class="body-text text-semi-dark">{{$t("about.text[0]")}}</p>
+        <p class="body-text text-semi-dark">{{$t("about.text[1]")}}</p>
     </section>
 </template>
 <style scoped>

@@ -46,4 +46,7 @@ h3 {
 .left .languages .info-list {
     row-gap: .5rem;
 }
+.intrests{
+    margin-bottom: 1rem;
+}
 </style>
