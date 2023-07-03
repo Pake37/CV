@@ -27,7 +27,7 @@ h3 {
 
 .left {
     background-color: var(--primary-color);
-    width: 30%;
+
     padding: 2rem 1rem;
 
 }
@@ -60,7 +60,7 @@ h3 {
 }
 
 .left .base-info h3 {
-    width: 100%;
+
     border-bottom: 2px solid var(--text-color-light);
     font-size: 1.1rem;
     margin-bottom: 1rem;
@@ -99,4 +99,28 @@ h3 {
         flex-direction: column;
     }
 
-}</style>
+}
+
+@media screen and (max-width:650px) {
+
+    .left .img-wrap {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 4px solid var(--bottom-border);
+        margin-bottom: 1rem;
+    }
+
+
+}
+
+@media screen and (max-width:650px) {
+
+    .left .img-wrap .fake-picture {
+        width: 200%;
+        height: 200%;
+        background-size: contain;
+    }
+
+}
+</style>

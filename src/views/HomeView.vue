@@ -68,7 +68,11 @@ h3 {
 
 @media screen and (max-width:650px) {
   .wrap {
+    width: 100%;
     flex-direction: column;
   }
+  .main-wrapper {
+  width: 100%;
+}
 }
 </style>

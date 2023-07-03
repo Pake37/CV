@@ -9,7 +9,7 @@ const { isDropDownReferences } = store;
 <template>
     <section class="references">
         <div class="section-name" style="position: relative;">
-            <h2 class="text-dark" @click="isDropDownReferences">{{$t("references.title")}}</h2>
+            <h2 class="text-dark" @click="isDropDownReferences">{{ $t("references.title") }}</h2>
             <div class="arrow" @click="isDropDownReferences">
                 <div class="arrow-top" :class="{ arrowActiveTop: dropDownReferences }"></div>
                 <div class="arrow-bottom" :class="{ arrowActiveBottom: dropDownReferences }"></div>
@@ -17,32 +17,33 @@ const { isDropDownReferences } = store;
         </div>
         <div class="horizontal-divider"></div>
         <main class="education-parts" v-if="dropDownReferences" :class="{ backgroundImg: dropDownReferences }">
-            <div class="active-period">
-                <h3 class="active-period title text-dark">{{$t("references.name.ablux")}}</h3>
+            
+            <div class="main-section">
+                <div class="active-period">
+                <h3 class="active-period title text-dark">{{ $t("references.name.ablux") }}</h3>
                 <div class="active-period period text-semi-dark">
-                    <span class="period">{{$t("references.company.ablux")}}</span>
+                    <span class="period">{{ $t("references.company.ablux") }}</span>
                 </div>
             </div>
             <a href="tel:+381642366102" class="body-text text-semi-dark phone">064/23-66-102</a>
             <a href="mailto:jovan.jovic@gmail.com" class="body-text text-semi-dark "
                 style="display: block;">marko@ablux.rs</a>
-            <div class="main-section">
                 <div class="active-period">
-                    <h3 class="active-period title text-dark">{{$t("references.name.probit")}}</h3>
+                    <h3 class="active-period title text-dark">{{ $t("references.name.probit") }}</h3>
                     <div class="active-period period text-semi-dark">
-                        <span class="period">{{$t("references.company.probit")}}</span>
+                        <span class="period">{{ $t("references.company.probit") }}</span>
                     </div>
                 </div>
                 <a href="tel:+381638805890" class="body-text text-semi-dark phone">063/88-05-890</a>
                 <div class="active-period">
-                    <h3 class="active-period title text-dark">{{$t("references.name.galenika")}}</h3>
+                    <h3 class="active-period title text-dark">{{ $t("references.name.galenika") }}</h3>
                     <div class="active-period period text-semi-dark">
-                        <span class="period">{{$t("references.company.galenika")}}</span>
+                        <span class="period">{{ $t("references.company.galenika") }}</span>
                     </div>
                 </div>
                 <a href="tel:+381642216179" class="body-text text-semi-dark phone">064/22-16-179</a>
-                <a href="./../../../public/Preporuka.pdf" target="_blank" class="body-text text-semi-dark "
-                    style="display: block;">{{$t("references.recommendation.galenika")}}</a>
+                <a href="preporuka.pdf" target="_blank" class="body-text text-semi-dark "
+                    style="display: block;">{{ $t("references.recommendation.galenika") }}</a>
             </div>
         </main>
     </section>
@@ -114,7 +115,7 @@ div .phone {
 }
 
 .text-semi-dark {
-    color:var(--text-color-semi-dark);
+    color: var(--text-color-semi-dark);
     line-height: 1.5rem;
 }
 
@@ -154,7 +155,7 @@ div .phone {
 
 .arrow-top,
 .arrow-bottom {
-    background-color:var(--arrow-color);
+    background-color: var(--arrow-color);
     height: 4px;
     left: -5px;
     position: absolute;
@@ -165,7 +166,7 @@ div .phone {
 .arrow-top::after,
 .arrow-bottom::after {
     content: "";
-    
+
     inset: 0;
     height: 100%;
     position: absolute;

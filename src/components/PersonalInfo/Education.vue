@@ -46,8 +46,7 @@ const { isDropDownEducation } = store;
                 <div class="body-text text-semi-dark">{{$t("education.internship.about")}}</div>
                 <p class="body-text text-semi-dark">{{$t("education.internship.text")}}</p>
                 <a href="http://074w123.e2.mars-hosting.com/auth">{{$t("education.internship.project_1")}}</a>
-                <a href="https://110w123.mars2.mars-hosting.com/" style="display: block;">{{$t("education.internship.project_2")}}</a>
-                <a href="./../../../public/Diploma praksa.pdf" target="_blank">{{$t("education.internship.certificate")}}</a>
+                <a href="diploma-praksa.pdf" target="_blank">{{$t("education.internship.certificate")}}</a>
             </div>
 
             <div class="main-section">
@@ -57,7 +56,7 @@ const { isDropDownEducation } = store;
                         <span>{{$t("education.economy.major")}}</span>
                     </div>
                 </div>
-                <a href="./../../../public/Diploma Ekonomski Fakultet.pdf" target="_blank">{{$t("education.economy.diploma")}}</a>
+                <a href="diploma-ekonomski.pdf" target="_blank">{{$t("education.economy.diploma")}}</a>
 
             </div>
         </main>
