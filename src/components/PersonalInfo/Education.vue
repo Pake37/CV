@@ -31,8 +31,8 @@ const { isDropDownEducation } = store;
                 </div>
                 <div class="body-text text-semi-dark">{{$t("education.my_project.api_name")}}</div>
                 <p class="body-text text-semi-dark">{{$t("education.my_project.api_text")}}</p>
-                <a href="https://github.com/Pake37/Kursna-lista-srednji-kurs-NBS-po-datumima.git">{{$t("education.my_project.api_project_1")}}</a>
-                <a href="https://github.com/Pake37/Kursna-lista-NBS-na-teku-i-dan.git">{{$t("education.my_project.api_project_2")}}</a>
+                <a href="https://github.com/Pake37/Kursna-lista-srednji-kurs-NBS-po-datumima.git" target="_blank">{{$t("education.my_project.api_project_1")}}</a>
+                <a href="https://github.com/Pake37/Kursna-lista-NBS-na-teku-i-dan.git" target="_blank">{{$t("education.my_project.api_project_2")}}</a>
             </div>
             <div class="main-section">
                 <div class="active-period">
@@ -45,7 +45,7 @@ const { isDropDownEducation } = store;
                 </div>
                 <div class="body-text text-semi-dark">{{$t("education.internship.about")}}</div>
                 <p class="body-text text-semi-dark">{{$t("education.internship.text")}}</p>
-                <a href="http://074w123.e2.mars-hosting.com/auth">{{$t("education.internship.project_1")}}</a>
+                <a href="http://074w123.e2.mars-hosting.com/auth" target="_blank">{{$t("education.internship.project_1")}}</a>
                 <a href="diploma-praksa.pdf" target="_blank">{{$t("education.internship.certificate")}}</a>
             </div>
 
