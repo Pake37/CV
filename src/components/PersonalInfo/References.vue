@@ -17,17 +17,17 @@ const { isDropDownReferences } = store;
         </div>
         <div class="horizontal-divider"></div>
         <main class="education-parts" v-if="dropDownReferences" :class="{ backgroundImg: dropDownReferences }">
-            
+
             <div class="main-section">
                 <div class="active-period">
-                <h3 class="active-period title text-dark">{{ $t("references.name.ablux") }}</h3>
-                <div class="active-period period text-semi-dark">
-                    <span class="period">{{ $t("references.company.ablux") }}</span>
+                    <h3 class="active-period title text-dark">{{ $t("references.name.ablux") }}</h3>
+                    <div class="active-period period text-semi-dark">
+                        <span class="period">{{ $t("references.company.ablux") }}</span>
+                    </div>
                 </div>
-            </div>
-            <a href="tel:+381642366102" class="body-text text-semi-dark phone">064/23-66-102</a>
-            <a href="mailto:jovan.jovic@gmail.com" class="body-text text-semi-dark "
-                style="display: block;">marko@ablux.rs</a>
+                <a href="tel:+381642366102" class="body-text text-semi-dark phone">064/23-66-102</a>
+                <a href="mailto:jovan.jovic@gmail.com" class="body-text text-semi-dark "
+                    style="display: block;">marko@ablux.rs</a>
                 <div class="active-period">
                     <h3 class="active-period title text-dark">{{ $t("references.name.probit") }}</h3>
                     <div class="active-period period text-semi-dark">
@@ -42,8 +42,15 @@ const { isDropDownReferences } = store;
                     </div>
                 </div>
                 <a href="tel:+381642216179" class="body-text text-semi-dark phone">064/22-16-179</a>
-                <a href="preporuka.pdf" target="_blank" class="body-text text-semi-dark "
-                    style="display: block;">{{ $t("references.recommendation.galenika") }}</a>
+                <a href="preporuka.pdf" target="_blank" class="recomendation" style="display: block;">
+                    <button>
+                        <p>{{ $t("references.recommendation.galenika") }}</p>
+                        <svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+                        </svg>
+                    </button>
+                </a>
             </div>
         </main>
     </section>
@@ -102,151 +109,13 @@ div .phone {
     margin-bottom: 1rem;
 }
 
-.body-text {
-    font-size: 0.95rem;
-
-}
-
-
-
-.text-dark {
-    color: var(--text-color-dark);
-    font-weight: bold;
-}
-
-.text-semi-dark {
-    color: var(--text-color-semi-dark);
-    line-height: 1.5rem;
-}
-
-.horizontal-divider {
-    width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--bottom-border);
-}
-
-.backgroundImg {
-    position: relative;
-}
-
 .backgroundImg::after {
-    content: '';
-    position: absolute;
-    inset: 0;
+
     background: var(--background-references);
-    opacity: 0.04;
     background-image: url(./../../assets/image/preporuke.svg);
     background-size: contain;
-    background-position: center;
 }
-
-.arrow {
-    cursor: pointer;
-    z-index: 100;
-    height: 1.1rem;
-    right: 3%;
-    position: absolute;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    transition: transform 0.1s;
-    width: 1.1rem;
-}
-
-.arrow-top,
-.arrow-bottom {
-    background-color: var(--arrow-color);
-    height: 4px;
-    left: -5px;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-}
-
-.arrow-top::after,
-.arrow-bottom::after {
-    content: "";
-
-    inset: 0;
-    height: 100%;
-    position: absolute;
-
-    transition: all 0.15s;
-}
-
-.arrow-top {
-    transform: rotate(135deg);
-    transform-origin: bottom right;
-}
-
-.arrow-top::after {
-    left: 100%;
-    right: 0;
-    transition-delay: 0s;
-}
-
-.arrow-bottom {
-    transform: rotate(45deg);
-    transform-origin: top right;
-    left: 0px;
-    top: 73%;
-}
-
-.arrow-bottom::after {
-    left: 0;
-    right: 100%;
-    transition-delay: 0.15s;
-}
-
-.arrow:hover .arrow-top::after {
-    left: 0;
-
-    transition-delay: 0.15s;
-}
-
-.arrowActiveTop {
-    transform: rotate(-135deg);
-    top: -11%;
-    left: 4px;
-}
-
-.arrowActiveBottom {
-    transform: rotate(-45deg);
-    top: 12%;
-    left: 3.5px;
-
-}
-
-.arrow:hover .arrow-bottom::after {
-    right: 0;
-    transition-delay: 0s;
-}
-
-.arrow:active {
-    transform: translateX(-50%) translateY(-50%) scale(0.9);
-}
-
-.section-name:hover {
-    cursor: pointer;
-}
-
-.section-name:hover .arrow-top::after {
-    content: "";
-    background: var(--arrow-color-hover);
-    inset: 0;
-    height: 100%;
-    position: absolute;
-
-    transition: all 0.15s;
-}
-
-.section-name:hover .arrow-bottom::after {
-    content: "";
-    background: var(--arrow-color-hover);
-    inset: 0;
-    height: 100%;
-    position: absolute;
-
-    transition: all 0.15s;
+.recomendation{
+    text-decoration: none;
 }
 </style>

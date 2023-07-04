@@ -112,7 +112,7 @@ select::-ms-expand {
     display: flex;
     width: 8em;
     height: 2em;
-    border-radius: .25em;
+    border-radius: .25rem;
     overflow: hidden;
 }
 
